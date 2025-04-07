@@ -146,3 +146,22 @@ porce = 15.25 * 1.05
 
 print(f"15 % de aumento de R$ {real} é R$ {porce:.2f}")
 print(f"formula 15.25 * 1.15\n")
+
+#exercicios 14
+#converta os graus
+# de C (celsos) para F (Fahrenheit) -> F = C*(9/5)+32   ou   F = C*1.8+32
+# 100°C é o intervalo de H2O fervente a congelada = 180°F
+# 32°F é de congelamento (0°C)
+
+# de F para C = C = ((F -32)*5)/9
+
+print(f"De Fahrenheit (85°) para Celsos = C = ((F -32)*5)/9 = {((85-32)*5)/9}°C")
+print(f"De Celsos (85°) para Fahrenheit = F = C*(9/5)+32 = {85*(9/5)+32}°F\n")
+
+#exercício 15
+# aluguem de carro - km percorrido(0.15/km) _ dias(60/d)
+
+km = float(input("Quantos km foi percorrido: "))
+dia = int(input("Quantos dias: "))
+print(f"Sendo o carro alugado por {dia} dias, com valor de R$60.00\n Tendo o carro rodado {km} km, com valor de R$0.15")
+print(f"O valor a ser pago será {(km*0.15)+(dia*60):.2f}\n")
