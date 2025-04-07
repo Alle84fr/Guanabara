@@ -70,20 +70,23 @@ valor = int(input("\ndigite valor: "))
 print(f"o antecessor de {valor} é\n {valor - 1}\n o sucessor é\n {valor + 1} ")
 
 # exercíco 06 
-#Crie algoritmo que mostre seu dobro, triplo e quadrupo
+#Crie algoritmo que mostre seu dobro, triplo e quadrupo, (add raiz quadrada)
+# raiz quadrada é n**(1/2) ou n ** 0.5 -->  este tinha errado, não sabia como fazer a raiz
 
-print(f" o dobro de 7 é {7*2} \n o triplo de 7 é {7*3}\n o quadruplo de 7 é {7*4}")
+# valor:.n°f - mosta n° de casas após o ponto ex: {real:.2f} sai float(f) = 45.25 e não 45.25896
+
+print(f" o dobro de 7 é {7*2} \n o triplo de 7 é {7*3}\n o quadruplo de 7 é {7*4}\n a raiz quadrada de 7 é {7**0.5:.3f}")
 
 # execício 07
 # calcular média de 3 notas
 
-print(f"\nnota1: 5.1 , nota2: 7.7, nota3: 6.8 \n a média é {(5.1+7.7+6.8)/3}")
+print(f"\nnota1: 5.1 , nota2: 7.7, nota3: 6.8 \n a média é {(5.1+7.7+6.8)/3:.2f}")
 
 # exercício 08
 # pegar valor em metro e converter para cm e mm
 
 metro = float(input("\nDigite um valor de metro para ser convertido, usar . : "))
-print(f"{metro} m equivale a:\n {metro*100} cm\n {metro*1000} mm\n")
+print(f"{metro} m equivale a:\n {metro*100:.0f} cm\n {metro*1000:.0f} mm\n")
 
 #exercíco 09
 # exercío tabuada - não vou usar método não dado
@@ -105,11 +108,11 @@ print(f"10*{tab} = {tab*10}\n")
 # conversão para dolar
 
 dinh = float(input("Quando vc quer converter? "))
-print(f"com dolar valendo 5.84, seu R$ {dinh} vale: $ {dinh/5.84}")
-print(f"com euro valendo 6.14, seu R$ {dinh} vale: € {dinh/6.41}")
-print(f"com libra estrellina valendo 7.39, seu R$ {dinh} vale: £ {dinh/7.39}")
-print(f"com iene estrellina valendo 0.04, seu R$ {dinh} vale: JP¥ {dinh*0.04}")
-print(f"com peso estrellina valendo 0.0045, seu R$ {dinh} vale: JP¥ {dinh*0.0045}\n")
+print(f"com dolar valendo 5.84, seu R$ {dinh} vale: $ {dinh/5.84:.4f}")
+print(f"com euro valendo 6.14, seu R$ {dinh} vale: € {dinh/6.41:.4f}")
+print(f"com libra estrellina valendo 7.39, seu R$ {dinh} vale: £ {dinh/7.39:.4f}")
+print(f"com iene estrellina valendo 0.04, seu R$ {dinh} vale: JP¥ {dinh*0.04:.4f}")
+print(f"com peso estrellina valendo 0.0045, seu R$ {dinh} vale: JP¥ {dinh*0.0045:.4f}\n")
 
 # Exercício 11
 # ler largura(l) e altura (h) calcular área e mais quatidade de tinta (1l = 2m**2)
@@ -124,18 +127,22 @@ print(f"para pinta {area} de parede com l {l} e altura {h} usa-se {litros} litro
 # 5 % de desconto
 
 real = 15.25
-porc = 15.25 * (1-0.15)
+porc = 15.25 * (1-0.05)
 # porce recebe valor que será multiplocado por ( 1 seria o inteiro/100% - 0.15 que quanto vou decontar = 85%)
 # ou pode fazer direto  %%%%%%%%%%%%%%%%%%%%% 15.25 * 0.85 %%%%%%%%%%%%%%%
 
-print(f"15 % de desconto de R$ {real} é R$ {porc}")
+# professor = 15.25*5/100   errei, coloquei 15% e não 5
+
+print(f"5 % de desconto de R$ {real} é R$ {porc:.2f}")
 print(f"formula 15.25 * (1-0.15)")
 
 # Exercício 13
-# 5 % de aumento
+# 15 % de aumento
 
-porce = 15.25 * 1.15
+porce = 15.25 * 1.05
 # aqui tem o valor * (100%(1) mais os 15%(0.15)
 
-print(f"15 % de aumento de R$ {real} é R$ {porce}")
+# professor = 15.25 + (15.25*15/100)   
+
+print(f"15 % de aumento de R$ {real} é R$ {porce:.2f}")
 print(f"formula 15.25 * 1.15\n")
