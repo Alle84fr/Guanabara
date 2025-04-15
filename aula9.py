@@ -162,8 +162,8 @@ print(f"     arrumando espeços sobrando         -> '{s.strip()}'")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
 frase = "Cavalo bebeu a água do bebê valdo"
-separa = frase.split()
-print(f"\nSeparando e crianod lista de palavras {separa}")
+frase = frase.split()
+print(f"\nSeparando e crianod lista de palavras {frase}")
 #retorno = Separando e crianod lista de palavras ['Cavalo', 'bebeu', 'a', 'água', 'do', 'bebê', 'valdo']
 
 # era
@@ -174,18 +174,73 @@ print(f"\nSeparando e crianod lista de palavras {separa}")
 # 0 1 2 3 4 5  0 1 2 3 4  0  0 1 2 3  0 1  0 1 2 3  0 1 2 3 4
 #     0           1       2     3      4      5        6            são 7 palavras
 # como se separasse em blocos, criando uma lista com todas as palavras
+ 
+print(f"pega o dado no índice 1 '{frase[1]}' e diga o que tem na posição 4 '{frase[1][4]}\n")
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #                             join - junta a string seprada                            #
 #                    pode por separador ou espaço entre as palvras                     #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
-junte = " ~ ".join(separa)
+junte = " ~ ".join(frase)
 print(junte)
 # retorno: Cavalo ~ bebeu ~ a ~ água ~ do ~ bebê ~ valdo
 # observar que como coloquei espaço dentro do aspas, sai com espaço se fizer sem fica sem espaço
 
-junto = ">".join(separa)
+junto = ">".join(frase)
 print(junto)
 # retorno: Cavalo>bebeu>a>água>do>bebê>valdo
 # aqui não tem espaço dentro das " "
+
+
+
+###########################################################################################
+#                                                                                         #
+#                                    Exercícios em aula                                   #
+#                                                                                         #
+###########################################################################################
+
+#%%
+# exe 22
+# escreva um nome completo e mostre tudo me maiúsculo, minúsculo, letras sem epaço, quantas letras no 1° nome
+
+nome = input("nome completo: ")
+
+print(nome.upper())    # sem ver
+print(nome.lower())    # sem ver
+print(len(nome))       # estava pondo len.nome, está errado. Correta é chamar len e dentro do parentes a lista
+
+# para tirar os espaços irei usar 1° posição o que não quero e na 2° como tem que se comportar
+# len para percorrer e contar
+# replace é para t rocar
+# " ", "" trocar espaço em branco por nada, juntar 
+
+print(len(nome.replace(" ", "")))            #tive de ver
+
+fat = nome.split()   # é split e não strip
+#print(fat)
+print(len(fat[0]))
+
+# %%
+
+# exer 23
+# ler um número entre 0 9999 e retornar separados
+
+num = input("numero de 0 a 9999: "))
+nu = len(num)
+
+if num < 10:
+    print(f"unidade {nu[0]}")
+elif num < 100:
+    print(f"""unidade {nu[0]}
+          dezena {nu[1]}""")
+elif num < 1000:
+    print(f"""unidade {nu[0]}
+          dezena {nu[1]}
+          centena {nu[2]}""")
+else:
+        print(f"""unidade {nu[0]}
+          dezena {nu[1]}
+          centena {nu[2]}
+          milhar {nu[3]}""")
+# %%
