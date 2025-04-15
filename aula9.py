@@ -113,5 +113,43 @@ repl = cadeia.replace("em","dentro")
 print(f"Ficou '{repl}'")
 
 # ====================================================================================#
-#                            replace - trocar/ reposicionar                           #
+#                            upper - fontes MAIÚSCULAS                                #
 # ====================================================================================#
+
+f = "tudo em maiúsculo"
+print(f"tudo em maiúsculo -> '{f.upper()}'")
+# uper é um método, tem de ter () no final
+
+# ====================================================================================#
+#                            lower - fontes minúsclua                                 #
+# ====================================================================================#
+
+c = "FRASE TODA MAIÚSCULA"
+print(f"FRASE TODA MINÚSCULA -> '{c.lower()}'")
+
+# ====================================================================================#
+#                      capitaliza - só 1° letra fica maiúscula                        #
+# ====================================================================================#
+
+d = "Deixa Só A Primeira MAIÚSCULA"
+print(f"Deixa Só A Primeira MAIÚSCULA -> '{d.capitalize()}'")
+
+# ====================================================================================#
+#                      title - 1° letras da palvras em maiúscula                      #
+# ====================================================================================#
+
+e = "as primeiras LETRAS SERÃO em maiúsculo"
+print(f"as primeiras LETRAS SERÃO em maiúsculo -> '{e.title()}'")
+
+# ====================================================================================#
+#                       strip - remoce epaços no início e fim                      #
+# ====================================================================================#
+
+s = "     arrumando espeços sobrando        "
+print(f"     arrumando espeços sobrando         -> '{s.strip()}'")
+# tem 5 espaços no início e 8 no final
+
+# r = right    - coloca rstring - só pega os final - direita
+# l = lefth    - coloca lstring - só pega os iniciais - esquerda
+
+#                                       DIVISÃO
