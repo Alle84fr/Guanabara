@@ -20,6 +20,7 @@
 cadeia = "curso em videos"   
 # estava dando erro na numeração dos índices, ex: 8 estava pegando m - motivo, tinha espeço no início da frase, criando um "caractere" a mais " curso em vídeo". foi arrumado
 
+print(" ")
 print(cadeia)
 #printa toda frase da variável cadeia
 
@@ -86,7 +87,7 @@ print(cadeia.count("o",0,16))
 #                       find- momento que iniciou a repetição                         #
 # ------------------------------------------------------------------------------------#
 
-print(f"A primeira vez que aparece um e na na {cadeia.find('e')} posição")
+print(f"\nA primeira vez que aparece um e na na {cadeia.find('e')} posição")
 # observação - dentro do parentes, dentro das aspas do f, não pode ter outra igual, então, se inicia com aspa duplas ""
 # e dentro precisa de aspas use a simples, se incia com a simples, dentro use as " "
 print(f"A primeira vez que aparece um ideo na na {cadeia.find('ideo')} posição")
@@ -97,7 +98,7 @@ print(f"A primeira vez que aparece um ideo na na {cadeia.find('tuba')} posição
 #                                     in- tem no                                      #
 # ------------------------------------------------------------------------------------#
 
-print(f"Tem em dentro da frase Curso em video? {'em'in cadeia}")
+print(f"\nTem em dentro da frase Curso em video? {'em'in cadeia}")
 # resposta True
 print(f"Tem lha dentro da frase Curso em video? {'lha'in cadeia}")
 # resposta False
@@ -110,14 +111,14 @@ print(f"Tem lha dentro da frase Curso em video? {'lha'in cadeia}")
 # ====================================================================================#
 
 repl = cadeia.replace("em","dentro")
-print(f"Ficou '{repl}'")
+print(f"\nFicou '{repl}'")
 
 # ====================================================================================#
 #                            upper - fontes MAIÚSCULAS                                #
 # ====================================================================================#
 
 f = "tudo em maiúsculo"
-print(f"tudo em maiúsculo -> '{f.upper()}'")
+print(f"\ntudo em maiúsculo -> '{f.upper()}'")
 # uper é um método, tem de ter () no final
 
 # ====================================================================================#
@@ -142,7 +143,7 @@ e = "as primeiras LETRAS SERÃO em maiúsculo"
 print(f"as primeiras LETRAS SERÃO em maiúsculo -> '{e.title()}'")
 
 # ====================================================================================#
-#                       strip - remoce epaços no início e fim                      #
+#                       strip - remoce epaços no início e fim                         #
 # ====================================================================================#
 
 s = "     arrumando espeços sobrando        "
@@ -152,4 +153,39 @@ print(f"     arrumando espeços sobrando         -> '{s.strip()}'")
 # r = right    - coloca rstring - só pega os final - direita
 # l = lefth    - coloca lstring - só pega os iniciais - esquerda
 
+
 #                                       DIVISÃO
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                   split - divide a string considerando os espaços                    #
+#                    cada pavra recebe um índice novo, é recolocada                    #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+frase = "Cavalo bebeu a água do bebê valdo"
+separa = frase.split()
+print(f"\nSeparando e crianod lista de palavras {separa}")
+#retorno = Separando e crianod lista de palavras ['Cavalo', 'bebeu', 'a', 'água', 'do', 'bebê', 'valdo']
+
+# era
+# C a v a l o   b e b e  u     a     a  g  u  a     d  o     b  e  b  e     V  a  l  d  o
+# 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+# ficaria
+# C a v a l o  b e b e u  a  a g u a  d o  b e b e  V a l d o
+# 0 1 2 3 4 5  0 1 2 3 4  0  0 1 2 3  0 1  0 1 2 3  0 1 2 3 4
+#     0           1       2     3      4      5        6            são 7 palavras
+# como se separasse em blocos, criando uma lista com todas as palavras
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#                             join - junta a string seprada                            #
+#                    pode por separador ou espaço entre as palvras                     #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+junte = " ~ ".join(separa)
+print(junte)
+# retorno: Cavalo ~ bebeu ~ a ~ água ~ do ~ bebê ~ valdo
+# observar que como coloquei espaço dentro do aspas, sai com espaço se fizer sem fica sem espaço
+
+junto = ">".join(separa)
+print(junto)
+# retorno: Cavalo>bebeu>a>água>do>bebê>valdo
+# aqui não tem espaço dentro das " "
