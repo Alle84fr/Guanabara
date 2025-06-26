@@ -243,11 +243,11 @@ from math import perm
 
 sorte = perm(4, 4)
 
-if sortei == 0:
+if sorte == 0:
     k11 = "Rosa"
-elif sortei == 1:
+elif sorte == 1:
     k21 = "Rodolfo"
-elif sortei == 2:
+elif sorte == 2:
     k31 = "Rogério"
 else:
     k41 = "Roberta"
@@ -264,7 +264,7 @@ print(sorte)
 from random import shuffle
 
 alun = ["Rosa", "Rodolfo", "Rogério", "Roberta"] 
-shuffle(alun)
+random.shuffle(alun)
 
 print(f"chamada")
 print(alun)

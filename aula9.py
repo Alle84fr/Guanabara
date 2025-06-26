@@ -244,3 +244,9 @@ else:
           centena {nu[2]}
           milhar {nu[3]}""")
 # %%
+
+# ex 24 crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "santo"
+
+p = input("digite nome de uma cidades")
+print(f"A primeira vez que aparece um ideo na na {p.find('santos')} posição")
+# %%

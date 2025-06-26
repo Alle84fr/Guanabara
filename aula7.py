@@ -104,6 +104,11 @@ print(f"8*{tab} = {tab*8}")
 print(f"9*{tab} = {tab*9}")
 print(f"10*{tab} = {tab*10}\n")
 
+n = 0
+for i in range(0,11):
+       print(f"for {n}*{tab} = {tab*n}")
+       n += 1
+       
 #exercío 10
 # conversão para dolar
 
@@ -128,12 +133,13 @@ print(f"para pinta {area} de parede com l {l} e altura {h} usa-se {litros} litro
 
 real = 15.25
 porc = 15.25 * (1-0.05)
+poo = real * 0.05
 # porce recebe valor que será multiplocado por ( 1 seria o inteiro/100% - 0.15 que quanto vou decontar = 85%)
 # ou pode fazer direto  %%%%%%%%%%%%%%%%%%%%% 15.25 * 0.85 %%%%%%%%%%%%%%%
 
 # professor = 15.25*5/100   errei, coloquei 15% e não 5
 
-print(f"5 % de desconto de R$ {real} é R$ {porc:.2f}")
+print(f"5 % de desconto de R$ {real} é R$ {porc:.2f} quanto será descontado {poo:.2f}")
 print(f"formula 15.25 * (1-0.15)")
 
 # Exercício 13
