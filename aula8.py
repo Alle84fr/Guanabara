@@ -270,6 +270,23 @@ print(f"chamada")
 print(alun)
 
 
+#____________________________ detalhes
+
+
+# biblioteca random - gera números pseudoaleatórios e realiza operações relacionadas a aleatoridade
+# função .choise() - deve-se usar listas, tuplas ou strings - pois são ordenadas
+#                  - restorna UM elemento aleatório
+# função .shuffle() - embaralha a própria lista
+#                   - apenas em listas mutáveis ou seja string e tuplas não pode
+# função .random() - retorna float aleatório entre 0.0 e 1.0
+# função .randint(a, b) - retorna inteiro, aleatório, entre a e b
+# função .sample(sequencia, k) - retonar lista com k elementos únicos aleatórios da sequência
+# função .sample(sequencia, k = len(sequencia)) - esta é a mesma coisa que shuffle, porém deixa a lista original intacta e cria uma nova embaralhada
+# exemplo: lista_original = [1, 2, 3, 4, 5]
+#          lista_embaralhada = random.sample(lista_original, k=len(lista_original))
+
+
+
 #%%
 #________________________________________________________ exer 21
 
@@ -297,3 +314,5 @@ paygame.mixer.music.play()
 paygame.event.wait()
 #para esperar a múcica
 
+
+# %%
